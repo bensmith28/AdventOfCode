@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9c5bc573-7195-4574-8ed8-827f39837a54" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Object" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lDMPEFg38FvFmfV2VRfeyjoDAg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Year2020" />
+      <recent name="Year2016" />
+      <recent name="Year2015" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="main.kotlin.Year2015" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/Year2016" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Year2020" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Year2015" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/Year2015" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Day23Test.run special case sequential">
+    <configuration name="Day23Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdventOfCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Year2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Year2020" />
+      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day23Test.1000000 cups, 1000000 moves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdventOfCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Year2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Year2020" />
+      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
+      <option name="METHOD_NAME" value="1000000 cups, 1000000 moves" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day23Test.run sample 10 steps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdventOfCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Year2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Year2020" />
+      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
+      <option name="METHOD_NAME" value="run sample 10 steps" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day23Test.run sample 100 steps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdventOfCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Year2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Year2020" />
+      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
+      <option name="METHOD_NAME" value="run sample 100 steps" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day23Test.run special case sequential" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdventOfCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Year2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Year2020" />
+      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
+      <option name="METHOD_NAME" value="run special case sequential" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Day23Test.run special case sequential" />
+        <item itemvalue="JUnit.Day23Test" />
+        <item itemvalue="JUnit.Day23Test.run sample 10 steps" />
+        <item itemvalue="JUnit.Day23Test.1000000 cups, 1000000 moves" />
+        <item itemvalue="JUnit.Day23Test.run sample 100 steps" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c5bc573-7195-4574-8ed8-827f39837a54" name="Default Changelist" comment="" />
+      <created>1607127182469</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607127182469</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="251" y="136" width="698" height="528" key="find.popup" timestamp="1632444423218">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state x="251" y="136" width="698" height="528" key="find.popup/0.0.1200.800@0.0.1200.800" timestamp="1632444423218" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Year2020/Day23.kt</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="removed.plus(segment)" language="kotlin" />
+        <watch expression="generateSequence(first - 1) {&#10;                if(it &lt;= 1) cups.size&#10;                else it - 1&#10;            }.first { it &gt; 0 &amp;&amp; !removed.contains(it) }" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
