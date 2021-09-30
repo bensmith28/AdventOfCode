@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c5bc573-7195-4574-8ed8-827f39837a54" name="Default Changelist" comment="" />
+    <list default="true" id="9c5bc573-7195-4574-8ed8-827f39837a54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Year2016/Day10.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/LoaderHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Year2016/Day10-sample.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Year2016/Day10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Year2016/Day10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/AdventOfCode.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/AdventOfCode.kotlin_module" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,10 +18,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Kotlin Object" />
         <option value="JUnit5 Test Class" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -24,6 +35,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1lDMPEFg38FvFmfV2VRfeyjoDAg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -57,7 +71,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin/Year2015" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Day23Test.run special case sequential">
+  <component name="RunManager" selected="Kotlin.Year2016.Day10">
     <configuration name="Day23Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <extension name="coverage">
@@ -105,22 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day23Test.run sample 100 steps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AdventOfCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Year2020.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Year2020" />
-      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
-      <option name="METHOD_NAME" value="run sample 100 steps" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Day23Test.run special case sequential" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <extension name="coverage">
@@ -137,13 +135,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Year2016.Day10" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="AdventOfCode" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Year2016.Day10" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Year2016.Day10" />
         <item itemvalue="JUnit.Day23Test.run special case sequential" />
         <item itemvalue="JUnit.Day23Test" />
         <item itemvalue="JUnit.Day23Test.run sample 10 steps" />
         <item itemvalue="JUnit.Day23Test.1000000 cups, 1000000 moves" />
-        <item itemvalue="JUnit.Day23Test.run sample 100 steps" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +184,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="219" y="5" width="758" height="720" key="CommitChangelistDialog2" timestamp="1632962249290">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state x="219" y="5" width="758" height="720" key="CommitChangelistDialog2/0.0.1200.800@0.0.1200.800" timestamp="1632962249290" />
+    <state width="1152" height="253" key="GridCell.Tab.0.bottom" timestamp="1632962212890">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="253" key="GridCell.Tab.0.bottom/0.0.1200.800@0.0.1200.800" timestamp="1632962212890" />
+    <state width="1152" height="253" key="GridCell.Tab.0.center" timestamp="1632962212889">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="253" key="GridCell.Tab.0.center/0.0.1200.800@0.0.1200.800" timestamp="1632962212889" />
+    <state width="1152" height="253" key="GridCell.Tab.0.left" timestamp="1632962212887">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="253" key="GridCell.Tab.0.left/0.0.1200.800@0.0.1200.800" timestamp="1632962212887" />
+    <state width="1152" height="253" key="GridCell.Tab.0.right" timestamp="1632962212889">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="253" key="GridCell.Tab.0.right/0.0.1200.800@0.0.1200.800" timestamp="1632962212889" />
+    <state width="1152" height="242" key="GridCell.Tab.1.bottom" timestamp="1632961524907">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="242" key="GridCell.Tab.1.bottom/0.0.1200.800@0.0.1200.800" timestamp="1632961524907" />
+    <state width="1152" height="242" key="GridCell.Tab.1.center" timestamp="1632961524876">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="242" key="GridCell.Tab.1.center/0.0.1200.800@0.0.1200.800" timestamp="1632961524876" />
+    <state width="1152" height="242" key="GridCell.Tab.1.left" timestamp="1632961524876">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="242" key="GridCell.Tab.1.left/0.0.1200.800@0.0.1200.800" timestamp="1632961524876" />
+    <state width="1152" height="242" key="GridCell.Tab.1.right" timestamp="1632961524907">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="242" key="GridCell.Tab.1.right/0.0.1200.800@0.0.1200.800" timestamp="1632961524907" />
     <state x="251" y="136" width="698" height="528" key="find.popup" timestamp="1632444423218">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
@@ -189,6 +236,9 @@
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="JetRunConfigurationType">
+        <watch expression="LoaderHelper::class.java.getResource(&quot;/Year2016/Day10.txt&quot;)" language="kotlin" />
+      </configuration>
       <configuration name="JUnit">
         <watch expression="removed.plus(segment)" language="kotlin" />
         <watch expression="generateSequence(first - 1) {&#10;                if(it &lt;= 1) cups.size&#10;                else it - 1&#10;            }.first { it &gt; 0 &amp;&amp; !removed.contains(it) }" />
