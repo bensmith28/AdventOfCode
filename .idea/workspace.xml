@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c5bc573-7195-4574-8ed8-827f39837a54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Year2016/Day10.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/LoaderHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Year2016/Day10-sample.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Year2016/Day11.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Year2016/Day11Test.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Year2016/Day10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Year2016/Day10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/AdventOfCode.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/AdventOfCode.kotlin_module" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +15,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="JUnit5 Test Class" />
-        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -53,8 +50,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="Year2020" />
       <recent name="Year2016" />
+      <recent name="Year2020" />
       <recent name="Year2015" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -71,78 +68,78 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin/Year2015" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Year2016.Day10">
-    <configuration name="Day23Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.Year2016.Day11">
+    <configuration name="Day11Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Year2020.*" />
+          <option name="PATTERN" value="Year2016.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Year2020" />
-      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
+      <option name="PACKAGE_NAME" value="Year2016" />
+      <option name="MAIN_CLASS_NAME" value="Year2016.Day11Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day23Test.1000000 cups, 1000000 moves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day11Test.all samples not fried, pair encoded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Year2020.*" />
+          <option name="PATTERN" value="Year2016.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Year2020" />
-      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
-      <option name="METHOD_NAME" value="1000000 cups, 1000000 moves" />
+      <option name="PACKAGE_NAME" value="Year2016" />
+      <option name="MAIN_CLASS_NAME" value="Year2016.Day11Test" />
+      <option name="METHOD_NAME" value="all samples not fried, pair encoded" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day23Test.run sample 10 steps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day11Test.sample steps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Year2020.*" />
+          <option name="PATTERN" value="Year2016.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Year2020" />
-      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
-      <option name="METHOD_NAME" value="run sample 10 steps" />
+      <option name="PACKAGE_NAME" value="Year2016" />
+      <option name="MAIN_CLASS_NAME" value="Year2016.Day11Test" />
+      <option name="METHOD_NAME" value="sample steps" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day23Test.run special case sequential" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Day11Test.sample steps, pair encoded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Year2020.*" />
+          <option name="PATTERN" value="Year2016.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Year2020" />
-      <option name="MAIN_CLASS_NAME" value="Year2020.Day23Test" />
-      <option name="METHOD_NAME" value="run special case sequential" />
+      <option name="PACKAGE_NAME" value="Year2016" />
+      <option name="MAIN_CLASS_NAME" value="Year2016.Day11Test" />
+      <option name="METHOD_NAME" value="sample steps, pair encoded" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Year2016.Day10" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="Year2016.Day11" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Year2016.Day10" />
+      <option name="MAIN_CLASS_NAME" value="Year2016.Day11" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Year2016.Day10" />
-        <item itemvalue="JUnit.Day23Test.run special case sequential" />
-        <item itemvalue="JUnit.Day23Test" />
-        <item itemvalue="JUnit.Day23Test.run sample 10 steps" />
-        <item itemvalue="JUnit.Day23Test.1000000 cups, 1000000 moves" />
+        <item itemvalue="Kotlin.Year2016.Day11" />
+        <item itemvalue="JUnit.Day11Test" />
+        <item itemvalue="JUnit.Day11Test.sample steps, pair encoded" />
+        <item itemvalue="JUnit.Day11Test.all samples not fried, pair encoded" />
+        <item itemvalue="JUnit.Day11Test.sample steps" />
       </list>
     </recent_temporary>
   </component>
@@ -181,67 +178,94 @@
       <option name="presentableId" value="Default" />
       <updated>1607127182469</updated>
     </task>
+    <task id="LOCAL-00001" summary="Day 10">
+      <created>1632962250530</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632962250531</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Day 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 10" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="219" y="5" width="758" height="720" key="CommitChangelistDialog2" timestamp="1632962249290">
+    <state x="376" y="127" width="443" height="392" key="#com.intellij.ide.util.MemberChooser" timestamp="1633204975977">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state x="219" y="5" width="758" height="720" key="CommitChangelistDialog2/0.0.1200.800@0.0.1200.800" timestamp="1632962249290" />
-    <state width="1152" height="253" key="GridCell.Tab.0.bottom" timestamp="1632962212890">
+    <state x="376" y="127" width="443" height="392" key="#com.intellij.ide.util.MemberChooser/0.0.1200.800@0.0.1200.800" timestamp="1633204975977" />
+    <state x="219" y="5" width="754" height="706" key="CommitChangelistDialog2" timestamp="1633220401900">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="253" key="GridCell.Tab.0.bottom/0.0.1200.800@0.0.1200.800" timestamp="1632962212890" />
-    <state width="1152" height="253" key="GridCell.Tab.0.center" timestamp="1632962212889">
+    <state x="219" y="5" width="754" height="706" key="CommitChangelistDialog2/0.0.1200.800@0.0.1200.800" timestamp="1633220401900" />
+    <state width="1152" height="253" key="GridCell.Tab.0.bottom" timestamp="1633220331759">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="253" key="GridCell.Tab.0.center/0.0.1200.800@0.0.1200.800" timestamp="1632962212889" />
-    <state width="1152" height="253" key="GridCell.Tab.0.left" timestamp="1632962212887">
+    <state width="1152" height="253" key="GridCell.Tab.0.bottom/0.0.1200.800@0.0.1200.800" timestamp="1633220331759" />
+    <state width="1152" height="253" key="GridCell.Tab.0.center" timestamp="1633220331756">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="253" key="GridCell.Tab.0.left/0.0.1200.800@0.0.1200.800" timestamp="1632962212887" />
-    <state width="1152" height="253" key="GridCell.Tab.0.right" timestamp="1632962212889">
+    <state width="1152" height="253" key="GridCell.Tab.0.center/0.0.1200.800@0.0.1200.800" timestamp="1633220331756" />
+    <state width="1152" height="253" key="GridCell.Tab.0.left" timestamp="1633220331754">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="253" key="GridCell.Tab.0.right/0.0.1200.800@0.0.1200.800" timestamp="1632962212889" />
-    <state width="1152" height="242" key="GridCell.Tab.1.bottom" timestamp="1632961524907">
+    <state width="1152" height="253" key="GridCell.Tab.0.left/0.0.1200.800@0.0.1200.800" timestamp="1633220331754" />
+    <state width="1152" height="253" key="GridCell.Tab.0.right" timestamp="1633220331758">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="242" key="GridCell.Tab.1.bottom/0.0.1200.800@0.0.1200.800" timestamp="1632961524907" />
-    <state width="1152" height="242" key="GridCell.Tab.1.center" timestamp="1632961524876">
+    <state width="1152" height="253" key="GridCell.Tab.0.right/0.0.1200.800@0.0.1200.800" timestamp="1633220331758" />
+    <state width="1152" height="242" key="GridCell.Tab.1.bottom" timestamp="1633219807922">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="242" key="GridCell.Tab.1.center/0.0.1200.800@0.0.1200.800" timestamp="1632961524876" />
-    <state width="1152" height="242" key="GridCell.Tab.1.left" timestamp="1632961524876">
+    <state width="1152" height="242" key="GridCell.Tab.1.bottom/0.0.1200.800@0.0.1200.800" timestamp="1633219807922" />
+    <state width="1152" height="242" key="GridCell.Tab.1.center" timestamp="1633219807921">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="242" key="GridCell.Tab.1.left/0.0.1200.800@0.0.1200.800" timestamp="1632961524876" />
-    <state width="1152" height="242" key="GridCell.Tab.1.right" timestamp="1632961524907">
+    <state width="1152" height="242" key="GridCell.Tab.1.center/0.0.1200.800@0.0.1200.800" timestamp="1633219807921" />
+    <state width="1152" height="242" key="GridCell.Tab.1.left" timestamp="1633219807920">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
-    <state width="1152" height="242" key="GridCell.Tab.1.right/0.0.1200.800@0.0.1200.800" timestamp="1632961524907" />
+    <state width="1152" height="242" key="GridCell.Tab.1.left/0.0.1200.800@0.0.1200.800" timestamp="1633219807920" />
+    <state width="1152" height="242" key="GridCell.Tab.1.right" timestamp="1633219807921">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="1152" height="242" key="GridCell.Tab.1.right/0.0.1200.800@0.0.1200.800" timestamp="1633219807921" />
+    <state x="307" y="126" width="581" height="534" key="MultipleFileMergeDialog" timestamp="1632962272918">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state x="307" y="126" width="581" height="534" key="MultipleFileMergeDialog/0.0.1200.800@0.0.1200.800" timestamp="1632962272918" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1633185749244">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1200.800@0.0.1200.800" timestamp="1633185749243" />
+    <state x="198" y="144" width="800" height="498" key="Vcs.Push.Dialog.v2" timestamp="1632962258256">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state x="198" y="144" width="800" height="498" key="Vcs.Push.Dialog.v2/0.0.1200.800@0.0.1200.800" timestamp="1632962258256" />
+    <state x="161" y="147" width="873" height="492" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1633219793663">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state x="161" y="147" width="873" height="492" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1200.800@0.0.1200.800" timestamp="1633219793663" />
     <state x="251" y="136" width="698" height="528" key="find.popup" timestamp="1632444423218">
       <screen x="0" y="0" width="1200" height="800" />
     </state>
     <state x="251" y="136" width="698" height="528" key="find.popup/0.0.1200.800@0.0.1200.800" timestamp="1632444423218" />
+    <state x="377" y="128" width="442" height="529" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog" timestamp="1633131144999">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state x="377" y="128" width="442" height="529" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog/0.0.1200.800@0.0.1200.800" timestamp="1633131144999" />
+    <state x="264" y="61" width="672" height="676" key="search.everywhere.popup" timestamp="1633137401004">
+      <screen x="0" y="0" width="1200" height="800" />
+    </state>
+    <state x="264" y="61" width="672" height="676" key="search.everywhere.popup/0.0.1200.800@0.0.1200.800" timestamp="1633137401004" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Year2020/Day23.kt</url>
-          <line>33</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
-      <configuration name="JetRunConfigurationType">
-        <watch expression="LoaderHelper::class.java.getResource(&quot;/Year2016/Day10.txt&quot;)" language="kotlin" />
-      </configuration>
       <configuration name="JUnit">
-        <watch expression="removed.plus(segment)" language="kotlin" />
-        <watch expression="generateSequence(first - 1) {&#10;                if(it &lt;= 1) cups.size&#10;                else it - 1&#10;            }.first { it &gt; 0 &amp;&amp; !removed.contains(it) }" />
+        <watch expression="PairEncodedState(d.toString().single(), new.joinToString(&quot;:&quot;), this.steps + 1).isFried" language="kotlin" />
       </configuration>
     </watches-manager>
   </component>
