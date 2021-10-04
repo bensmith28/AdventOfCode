@@ -1,7 +1,7 @@
 package Year2016
 
-import main.kotlin.Year2015.Day4.md5
-import main.kotlin.Year2015.Day4.toHex
+import Year2015.Day4.md5
+import Year2015.Day4.toHex
 
 object Day5 {
     val input = "ojvtpuvg"

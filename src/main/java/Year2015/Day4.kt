@@ -1,4 +1,4 @@
-package main.kotlin.Year2015
+package Year2015
 
 import java.security.MessageDigest
 
