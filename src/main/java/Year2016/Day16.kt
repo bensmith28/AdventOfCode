@@ -58,7 +58,7 @@ object Day16 {
             'q' -> q
             '0' -> zero
             '1' -> one
-            else -> TODO()
+            else -> throw IllegalArgumentException()
         } }.flatten()
     }
 
