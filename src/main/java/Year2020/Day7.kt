@@ -20,7 +20,7 @@ object Day7 {
         }
 
         fun Rule.mustContain(): Int {
-            return children.entries.sumBy { (color, count) ->
+            return children.entries.sumOf { (color, count) ->
                 val childMustContain = rules[color]?.mustContain() ?: 0
                 count * (childMustContain + 1)
             }

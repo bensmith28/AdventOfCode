@@ -37,7 +37,7 @@ object Day10 {
                 // Generate every possible parcel with the right count
                 (2..adapterCount).asSequence().fold(sequenceOf(listOf(start))) { chains, _ ->
                     chains.map { chain ->
-                        val top = chain.max()!!
+                        val top = chain.maxOrNull()!!
                         adaptersInSegment.minus(chain).filter { adapter ->
                             adapter > top && adapter <= top + 3
                         }.map { adapter ->
@@ -45,7 +45,7 @@ object Day10 {
                         }
                     }.flatten()
                 }
-            }.flatten().filter { it.max() == end }
+            }.flatten().filter { it.maxOrNull() == end }
 
             return chainGenerator.count().toLong()
         }

@@ -19,6 +19,6 @@ object Day1 {
         }
 
         println("Santa ended up on floor $currentFloor")
-        println("Santa first went into the basement at step ${positionsInBasement.min()}")
+        println("Santa first went into the basement at step ${positionsInBasement.minOrNull()}")
     }
 }

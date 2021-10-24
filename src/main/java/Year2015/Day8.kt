@@ -8,10 +8,10 @@ object Day8 {
     @JvmStatic
     fun main(args: Array<String>) {
         val lines = input.readLines().map { Line(it) }
-        val codeToMemory = lines.sumBy { line ->
+        val codeToMemory = lines.sumOf { line ->
             line.codeCount - line.memoryCount
         }
-        val encodedToCode = lines.sumBy { line ->
+        val encodedToCode = lines.sumOf { line ->
             line.encodedCount - line.codeCount
         }
 

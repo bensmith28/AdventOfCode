@@ -56,7 +56,7 @@ object Day22 {
             youWon to you.spentMana
         }.filter { (youWon, _) -> youWon }.map { (_, spentMana) -> spentMana }.take(10000)
 
-        println("Best Attempt: ${attempts.min()}")
+        println("Best Attempt: ${attempts.minOrNull()}")
         // 907 too low
         // 1288 too high
         // Right answer: 953

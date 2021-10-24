@@ -43,7 +43,7 @@ object Day8 {
             (0 until width).map { false }.toMutableList()
         }.toMutableList()
 
-        val litPixels get() = pixels.sumBy { row -> row.filter { pixel -> pixel }.count() }
+        val litPixels get() = pixels.sumOf { row -> row.filter { pixel -> pixel }.count() }
 
         fun rect(w: Int, h: Int) {
             (0 until w).forEach { x ->

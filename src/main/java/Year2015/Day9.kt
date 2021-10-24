@@ -26,14 +26,14 @@ object Day9 {
         println("Locations: $locations")
 
         fun attempt(): Int {
-            return locations.shuffled().windowed(2).sumBy { (origin, destination) ->
+            return locations.shuffled().windowed(2).sumOf { (origin, destination) ->
                 graph.getValue(origin).getValue(destination)
             }
         }
 
         (1..10).forEach { power ->
             val top = 10.0.pow(power).roundToInt()
-            val result = (1..top).map { attempt() }.max()
+            val result = (1..top).map { attempt() }.maxOrNull()
             println("Result $top: $result")
         }
     }

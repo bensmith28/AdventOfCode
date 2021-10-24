@@ -120,7 +120,7 @@ object Day11 {
             mappedState.steps)
 
         override val isWinner: Boolean
-            get() = pairs.split(":").all { it[0].toInt() == 4 && it[1].toInt() == 4 }
+            get() = pairs.split(":").all { it[0].code == 4 && it[1].code == 4 }
 
         override val isFried: Boolean
             get() {

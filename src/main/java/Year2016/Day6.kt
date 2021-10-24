@@ -29,6 +29,6 @@ object Day6 {
             profile.plus(
                 c to ((profile[c] ?: 0) + 1)
             )
-        }.entries.minBy { (_, count) -> count }?.key!!
+        }.entries.minByOrNull { (_, count) -> count }?.key!!
     }
 }

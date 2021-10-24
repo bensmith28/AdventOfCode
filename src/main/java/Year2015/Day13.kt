@@ -55,7 +55,7 @@ data class Rule(val subj: String, val obj: String, val delta: Int) {
 }
 
 class Table(people: List<Person>) {
-    val netHappiness = (people.indices).sumBy { index ->
+    val netHappiness = (people.indices).sumOf { index ->
         val neighbor1 = when(index) {
             0 -> people.size - 1
             else -> index - 1

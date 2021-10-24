@@ -30,7 +30,7 @@ object Day15 {
             }
         }
 
-        val bestCookie = finalBatch.maxBy { it.score } ?: throw IllegalStateException("No Cookies!")
+        val bestCookie = finalBatch.maxByOrNull { it.score } ?: throw IllegalStateException("No Cookies!")
 
         println("winning cookie is         ${bestCookie.score}")
 
@@ -44,7 +44,7 @@ object Day15 {
             }
         }
 
-        val bestHealthyCookie = finalHealthyBatch.maxBy { it.score } ?: throw IllegalStateException("No Cookies!")
+        val bestHealthyCookie = finalHealthyBatch.maxByOrNull { it.score } ?: throw IllegalStateException("No Cookies!")
 
         println("winning healthy cookie is ${bestHealthyCookie.score}")
     }

@@ -14,7 +14,7 @@ object Day6 {
             else groupAnswers.last().add(line)
         }
 
-        val sum = groupAnswers.sumBy { group ->
+        val sum = groupAnswers.sumOf { group ->
             group.fold(group.first().toSet()) { questions, answers ->
                 questions.intersect(answers.toSet())
             }.size

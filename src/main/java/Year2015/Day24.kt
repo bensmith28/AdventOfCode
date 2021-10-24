@@ -34,7 +34,7 @@ object Day24 {
             parcel.size == minParcelSize && parcel.sum() == goalParcelWeight
         }.map { parcel ->
             parcel.fold(1.toLong()) { score, pkg -> score * pkg }
-        }.min()
+        }.minOrNull()
 
         println("Best quantum score: $bestQuantum")
 

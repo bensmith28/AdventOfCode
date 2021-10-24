@@ -51,7 +51,7 @@ object Day4 {
 
         val decryptedName = label.map { c ->
             if( c == '-' ) ' '
-            else (((c.toInt() - 'a'.toInt() + sectorId) % 26) + 'a'.toInt()).toChar()
+            else (((c.code - 'a'.code + sectorId) % 26) + 'a'.code).toChar()
         }.joinToString("")
     }
 }

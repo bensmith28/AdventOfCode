@@ -10,7 +10,7 @@ object Day14 {
     fun main(args: Array<String>) {
         val time = 2503
         val reindeer = input.readLines().map { Reindeer(it) }
-        val winner = reindeer.maxBy { it.calcDistance(time) } ?: throw IllegalStateException()
+        val winner = reindeer.maxByOrNull { it.calcDistance(time) } ?: throw IllegalStateException()
 
         println("${winner.name} won with a distance of ${winner.calcDistance(time)}")
 
@@ -25,7 +25,7 @@ object Day14 {
             }
         }
 
-        val (secondWinner, points) = scoreboard.entries.maxBy { (_, points) -> points }!!
+        val (secondWinner, points) = scoreboard.entries.maxByOrNull { (_, points) -> points }!!
 
         println("In the second race, $secondWinner won with $points points")
     }

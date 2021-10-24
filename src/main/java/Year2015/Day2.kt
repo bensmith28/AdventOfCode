@@ -12,8 +12,8 @@ object Day2 {
             val match = matcher.matchEntire(line) ?: throw IllegalArgumentException("Cannot parse: $line")
             Present(match.groupValues[1].toInt(), match.groupValues[2].toInt(), match.groupValues[3].toInt())
         }
-        val paperNeeded = presents.sumBy { it.paperNeeded }
-        val ribbonNeeded = presents.sumBy { it.ribbonNeeded }
+        val paperNeeded = presents.sumOf { it.paperNeeded }
+        val ribbonNeeded = presents.sumOf { it.ribbonNeeded }
 
         println("You need $paperNeeded square feet of wrapping paper")
         println("You need $ribbonNeeded feet of ribbon")
@@ -21,6 +21,6 @@ object Day2 {
 }
 
 class Present(l: Int, w: Int, h: Int) {
-    val paperNeeded = 2 * l * w + 2 * w * h + 2 * h * l + (listOf(l * w, w * h, h * l).min() ?: 0)
-    val ribbonNeeded = (listOf(2 * (l + w), 2 * (w + h), 2 * (h + l)).min() ?: 0) + l * w * h
+    val paperNeeded = 2 * l * w + 2 * w * h + 2 * h * l + (listOf(l * w, w * h, h * l).minOrNull() ?: 0)
+    val ribbonNeeded = (listOf(2 * (l + w), 2 * (w + h), 2 * (h + l)).minOrNull() ?: 0) + l * w * h
 }

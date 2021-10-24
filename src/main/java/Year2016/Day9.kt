@@ -9,7 +9,7 @@ object Day9 {
             .readLines()
 
         val lengthOfDecompressed = lines.map { decompress(it) }
-            .sumBy { it.length }
+            .sumOf { it.length }
 
         println("Decompressed to $lengthOfDecompressed characters V1")
 

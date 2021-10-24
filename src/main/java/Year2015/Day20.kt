@@ -13,5 +13,5 @@ object Day20 {
 
     fun presentsForAddress(address: Int) = (1..address/2).plus(address)
         .filter { elf -> elf * 50 >= address && address % elf == 0 }
-        .sumBy { elf -> elf * 11 }
+        .sumOf { elf -> elf * 11 }
 }

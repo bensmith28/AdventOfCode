@@ -29,7 +29,7 @@ object Day6 {
                     grid.getValue(x)[y] = grid.getValue(x).getValue(y) + 1
                 }
                 "turn off" -> points.forEach { (x,y) ->
-                    grid.getValue(x)[y] = listOf(grid.getValue(x).getValue(y) - 1, 0).max() ?: 0
+                    grid.getValue(x)[y] = listOf(grid.getValue(x).getValue(y) - 1, 0).maxOrNull() ?: 0
                 }
                 "toggle" -> points.forEach { (x,y) ->
                     grid.getValue(x)[y] = grid.getValue(x).getValue(y) + 2
@@ -37,7 +37,7 @@ object Day6 {
             }
         }
 
-        val brightness = grid.values.sumBy { column ->
+        val brightness = grid.values.sumOf { column ->
             column.values.sum()
         }
 

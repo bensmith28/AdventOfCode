@@ -29,7 +29,7 @@ object Day12 {
 }
 
 private fun JsonNode.sumIgnoreReds(): Int {
-    return this.sumBy { child ->
+    return this.sumOf { child ->
         when {
             child.nodeType == JsonNodeType.STRING -> 0
             child.nodeType == JsonNodeType.NUMBER -> child.intValue()

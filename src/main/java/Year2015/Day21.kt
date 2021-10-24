@@ -56,7 +56,7 @@ object Day21 {
                     Character(100, 0, 0, weapons.plus(armors).plus(rings))
                 }.filter { didYouWin(it, boss) }
             }
-        }.minBy { you -> you.cost } ?: throw IllegalStateException("NO WINNER ?!?!?!")
+        }.minByOrNull { you -> you.cost } ?: throw IllegalStateException("NO WINNER ?!?!?!")
 
         println("You won with ${cheapestWinner.cost} gold!")
 
@@ -66,7 +66,7 @@ object Day21 {
                     Character(100, 0, 0, weapons.plus(armors).plus(rings))
                 }.filter { !didYouWin(it, boss) }
             }
-        }.maxBy { you -> you.cost } ?: throw IllegalStateException("NO WINNER ?!?!?!")
+        }.maxByOrNull { you -> you.cost } ?: throw IllegalStateException("NO WINNER ?!?!?!")
 
         println("You lost with ${biggestLoser.cost} gold!")
     }
@@ -82,9 +82,9 @@ object Day21 {
 }
 
 class Character(val hp: Int, damage: Int, armor: Int, val items: List<Item> = emptyList()) {
-    val damage = damage + items.sumBy { it.damage }
-    val armor = armor + items.sumBy { it.armor }
-    val cost = items.sumBy { it.cost }
+    val damage = damage + items.sumOf { it.damage }
+    val armor = armor + items.sumOf { it.armor }
+    val cost = items.sumOf { it.cost }
 }
 
 data class Item(val name: String, val type: ItemType, val cost: Int, val damage: Int, val armor: Int)

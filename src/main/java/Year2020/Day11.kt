@@ -95,7 +95,7 @@ object Day11 {
         }
 
         fun countOccupied(): Int {
-            return grid.sumBy { row -> row.count { spot -> spot == occupied } }
+            return grid.sumOf { row -> row.count { spot -> spot == occupied } }
         }
 
         fun countOccupiedNeighbors(x: Int, y: Int): Int {

@@ -112,7 +112,7 @@ object Day20 {
     }
 
     fun calculateRoughness(image: List<List<Char>>): Int {
-        return image.sumBy { pixelRow ->
+        return image.sumOf { pixelRow ->
             pixelRow.count { c -> c == '#' }
         }
     }

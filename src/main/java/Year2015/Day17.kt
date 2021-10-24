@@ -22,7 +22,7 @@ object Day17 {
 
         val actualSolutions = workingSolutions.filter { it.sum() == startingAmount }.toSet()
 
-        val minContainerCount = actualSolutions.minBy { it.size }?.size ?: -1
+        val minContainerCount = actualSolutions.minByOrNull { it.size }?.size ?: -1
         val solutionsAtMin = actualSolutions.filter { it.size == minContainerCount }
 
         println("Found ${actualSolutions.size} solutions")
@@ -30,6 +30,6 @@ object Day17 {
     }
 }
 
-private fun Collection<Container>.sum(): Int = this.sumBy { it.capacity }
+private fun Collection<Container>.sum(): Int = this.sumOf { it.capacity }
 
 data class Container(val capacity: Int, val name: String = UUID.randomUUID().toString())

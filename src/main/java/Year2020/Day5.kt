@@ -11,7 +11,7 @@ object Day5 {
             Seat(line)
         }
 
-        println("Highest Seat ID: ${seats.maxBy { it.id }?.id}")
+        println("Highest Seat ID: ${seats.maxByOrNull { it.id }?.id}")
 
         val mine = seats.sortedBy { it.id }.windowed(2, 1, false).single { (first, second) ->
             second.id - first.id > 1

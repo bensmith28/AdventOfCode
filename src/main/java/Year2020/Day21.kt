@@ -10,7 +10,7 @@ object Day21 {
 
         val safeIngredients = ingredientsThatCantBeAllergens(foods)
 
-        val appearances = foods.sumBy { food ->
+        val appearances = foods.sumOf { food ->
             food.ingredientNames.count { safeIngredients.contains(it) }
         }
 

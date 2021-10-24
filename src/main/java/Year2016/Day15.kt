@@ -18,7 +18,7 @@ object Day15 {
     }
 
     fun findAlignment(discs: Collection<Disc>): Int {
-        val base = discs.maxBy { it.size }!!
+        val base = discs.maxByOrNull { it.size }!!
         return generateSequence(base.firstAlignedAt) { it + base.size }
             .first { discs.all { d -> (it - d.firstAlignedAt) % d.size == 0 } }
     }

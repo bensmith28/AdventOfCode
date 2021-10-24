@@ -25,7 +25,7 @@ object Day9 {
             }
         }.flatten().first { it.sum() == firstError }
 
-        val weakness = weaknessWindow.min()!! + weaknessWindow.max()!!
+        val weakness = weaknessWindow.minOrNull()!! + weaknessWindow.maxOrNull()!!
 
         println("The weakness is $weakness")
     }
