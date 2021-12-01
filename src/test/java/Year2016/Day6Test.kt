@@ -2,11 +2,11 @@ package Year2016
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import util.asResourceFile
 import java.io.File
 
 internal class Day6Test {
-    val sample = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day6-sample.txt")
-        .readLines()
+    val sample = "/Year2016/Day6-sample.txt".asResourceFile().readLines()
 
     /*@Test*/ fun `test sample`() {
         val expected = "easter"
