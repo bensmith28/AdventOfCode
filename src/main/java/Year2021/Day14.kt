@@ -1,6 +1,5 @@
 package Year2021
 
-import Year2021.Day14.weaveWith
 import util.asResourceFile
 
 object Day14 {
@@ -30,21 +29,11 @@ object Day14 {
 
         fun score(n: Int): Long {
             val frequencies = mutableMapOf<Char, Long>()
-            fun inc(element: Char) {
-                frequencies[element] = frequencies.getOrDefault(element, 0) + 1
+            fun inc(link: Link) {
+                frequencies[link.element] = frequencies.getOrDefault(link.element, 0) + 1
             }
 
-            var polymer: Sequence<Char> = base.asSequence()
-            for(i in 1..n) {
-                val insert = polymer.windowed(2).map { frame ->
-                    rules[frame.asString()]!!
-                }
-                if(polymer.count() != insert.count() + 1) {
-                    println("Uh oh")
-                }
-                polymer = polymer.weaveWith(insert)
-            }
-            polymer.forEach { element -> inc(element) }
+            step(n).forEach { element -> inc(element) }
 
             val least = frequencies.values.minOrNull()!!
             val most = frequencies.values.maxOrNull()!!
@@ -52,36 +41,27 @@ object Day14 {
             return most - least
         }
 
-        fun step(n: Int, base: Sequence<Char> = this.base.asSequence()): Sequence<Char> {
-            return if(n == 0) base
-            else sequence {
-                step(n - 1, base).windowed(2, partialWindows = true).forEach { frame ->
-                    val result = rules[frame.asString()]?.let { insert ->
-                        sequenceOf(frame.first(), insert)
-                    } ?: frame.asSequence()
-                    yieldAll(result)
+        data class Link(
+            val element: Char,
+            val step: Int
+        ) {
+            override fun toString(): String {
+                return "$element"
+            }
+        }
+
+        fun step(n: Int): Sequence<Link> {
+            return sequence {
+                val chain = base.map { Link(it, 0) }.toMutableList()
+                while (chain.size > 1) {
+                    val tip = chain.removeAt(0)
+                    (tip.step + 1..n).forEach { step ->
+                        chain.add(0, Link(rules["" + tip.element + chain.first().element]!!, step))
+                    }
+                    yield(tip)
                 }
+                yieldAll(chain)
             }
         }
     }
-
-    fun Sequence<Char>.weaveWith(other: Sequence<Char>): Sequence<Char> =
-        this.joinToString("").weaveWith(other.joinToString("")).asSequence()
-
-    fun String.weaveWith(other: String): String {
-        val iter = this.iterator()
-        val otherIter = other.iterator()
-        return sequence {
-            yield(iter.next())
-            while(iter.hasNext()) {
-                if(!otherIter.hasNext()) {
-                    println("Uh oh")
-                }
-                yield(otherIter.next())
-                yield(iter.next())
-            }
-        }.joinToString("")
-    }
-
-    fun Iterable<Char>.asString() = this.joinToString("")
 }

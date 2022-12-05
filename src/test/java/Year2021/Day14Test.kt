@@ -1,6 +1,5 @@
 package Year2021
 
-import Year2021.Day14.weaveWith
 import org.junit.jupiter.api.Test
 import util.asResourceFile
 import kotlin.test.assertEquals
@@ -45,25 +44,6 @@ class Day14Test {
         assertEquals(
             "NBBNBNBBCCNBCNCCNBBNBBNBBBNBBNBBCBHCBHHNHCBBCBHCB",
             uut.step(4).joinToString("")
-        )
-    }
-
-    @Test fun `weaving sequences`() {
-        val base = "AAA".asSequence()
-        val insert = "BB".asSequence()
-        assertEquals(
-            "ABABA",
-            base.weaveWith(insert).joinToString("")
-        )
-    }
-
-    @Test fun `weaving sequences two levels`() {
-        val base = "AAA".asSequence()
-        val insert = "BB".asSequence()
-        val secondInsert = "cccc".asSequence()
-        assertEquals(
-            "AcBcAcBcA",
-            base.weaveWith(insert).weaveWith(secondInsert).joinToString("")
         )
     }
 
