@@ -18,15 +18,15 @@ object Day14 {
             val tenStepScore = template.score(10)
             println("Part 1: $tenStepScore")
         }.also {
-            println("Part 1 in $it")
+            println("Part 1 in $it") // should be 2851
         }
 
-//        measureTime {
-//            val fourtyStepScore = template.score(40)
-//            println("Part 2: $fourtyStepScore")
-//        }.also {
-//            println("Part 2 in $it")
-//        }
+        measureTime {
+            val fourtyStepScore = template.score(40)
+            println("Part 2: $fourtyStepScore")
+        }.also {
+            println("Part 2 in $it")
+        }
     }
 
     class PolymerTemplate(val base: String, val rules: Map<String, Char>) {
