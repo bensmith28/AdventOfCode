@@ -21,12 +21,12 @@ object Day14 {
             println("Part 1 in $it")
         }
 
-        measureTime {
-            val fourtyStepScore = template.score(40)
-            println("Part 2: $fourtyStepScore")
-        }.also {
-            println("Part 2 in $it")
-        }
+//        measureTime {
+//            val fourtyStepScore = template.score(40)
+//            println("Part 2: $fourtyStepScore")
+//        }.also {
+//            println("Part 2 in $it")
+//        }
     }
 
     class PolymerTemplate(val base: String, val rules: Map<String, Char>) {
@@ -56,8 +56,8 @@ object Day14 {
                                     frequencies[link.element] = frequencies.getValue(link.element) + 1
                                 }
 
-                                val links = PolymerTemplate(twoLinks, rules).step(n)
-                                if (i != 0) links.take(1) // drop the repeated first link
+                                val links = PolymerTemplate(twoLinks, rules).step(n).iterator()
+                                if (i != 0) links.next() // drop the repeated first link
                                 links.forEach { element -> inc(element) }
                                 frequencies.toMap()
                             }
