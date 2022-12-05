@@ -1,6 +1,10 @@
 package Year2021
 
+import kotlinx.coroutines.asCoroutineDispatcher
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import util.asResourceFile
+import java.util.concurrent.Executors
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
@@ -18,7 +22,7 @@ object Day14 {
         }
 
         measureTime {
-            val fourtyStepScore = template.score(20)
+            val fourtyStepScore = template.score(40)
             println("Part 2: $fourtyStepScore")
         }.also {
             println("Part 2 in $it")
@@ -39,12 +43,35 @@ object Day14 {
         }
 
         fun score(n: Int): Long {
-            val frequencies = mutableMapOf<Char, Long>()
-            fun inc(link: Link) {
-                frequencies[link.element] = frequencies.getOrDefault(link.element, 0) + 1
-            }
+            val frequencies = Executors
+                .newFixedThreadPool(Runtime.getRuntime().availableProcessors() - 2)
+                .asCoroutineDispatcher()
+                .use { coroutineContext ->
+                    runBlocking(coroutineContext) {
+                        val allElements = rules.values.toSet()
+                        base.windowed(2).mapIndexed { i, twoLinks ->
+                            async {
+                                val frequencies = allElements.associateWith { 0L }.toMutableMap()
+                                fun inc(link: Link) {
+                                    frequencies[link.element] = frequencies.getValue(link.element) + 1
+                                }
 
-            step(n).forEach { element -> inc(element) }
+                                val links = PolymerTemplate(twoLinks, rules).step(n)
+                                if (i != 0) links.take(1) // drop the repeated first link
+                                links.forEach { element -> inc(element) }
+                                frequencies.toMap()
+                            }
+                        }.map {
+                            it.await()
+                        }.reduce { acc, freq ->
+                            (acc.keys + freq.keys).associateWith { key ->
+                                val a = acc[key] ?: 0
+                                val f = freq[key] ?: 0
+                                a + f
+                            }
+                        }
+                    }
+                }
 
             val least = frequencies.values.minOrNull()!!
             val most = frequencies.values.maxOrNull()!!
