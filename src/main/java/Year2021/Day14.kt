@@ -1,17 +1,28 @@
 package Year2021
 
 import util.asResourceFile
+import kotlin.time.ExperimentalTime
+import kotlin.time.measureTime
 
 object Day14 {
+    @OptIn(ExperimentalTime::class)
     @JvmStatic
     fun main(args: Array<String>) {
         val template = "/Year2021/Day14.txt".asResourceFile().readLines().let { PolymerTemplate.parse(it) }
 
-        val tenStepScore = template.score(10)
-        println("Part 1: $tenStepScore")
+        measureTime {
+            val tenStepScore = template.score(10)
+            println("Part 1: $tenStepScore")
+        }.also {
+            println("Part 1 in $it")
+        }
 
-        val fourtyStepScore = template.score(40)
-        println("Part 2: $fourtyStepScore")
+        measureTime {
+            val fourtyStepScore = template.score(20)
+            println("Part 2: $fourtyStepScore")
+        }.also {
+            println("Part 2 in $it")
+        }
     }
 
     class PolymerTemplate(val base: String, val rules: Map<String, Char>) {
@@ -52,11 +63,13 @@ object Day14 {
 
         fun step(n: Int): Sequence<Link> {
             return sequence {
-                val chain = base.map { Link(it, 0) }.toMutableList()
+                val chain = ArrayDeque(base.map { Link(it, 0) })
                 while (chain.size > 1) {
-                    val tip = chain.removeAt(0)
+                    val tip = chain.removeFirst()
+                    var next = chain.first().element
                     (tip.step + 1..n).forEach { step ->
-                        chain.add(0, Link(rules["" + tip.element + chain.first().element]!!, step))
+                        next = rules["" + tip.element + next]!!
+                        chain.addFirst(Link(next, step))
                     }
                     yield(tip)
                 }
