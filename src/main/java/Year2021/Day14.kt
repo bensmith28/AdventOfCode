@@ -94,7 +94,7 @@ object Day14 {
                 while (chain.size > 1) {
                     val tip = chain.removeFirst()
                     var next = chain.first().element
-                    (tip.step + 1..n).forEach { step ->
+                    for(step in tip.step + 1 .. n) {
                         next = rules["" + tip.element + next]!!
                         chain.addFirst(Link(next, step))
                     }
