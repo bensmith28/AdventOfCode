@@ -19,7 +19,7 @@ object Day14 {
 
         measureTime {
             val fourtyStepScore = template.score(40)
-            println("Part 2: $fourtyStepScore")
+            println("Part 2: $fourtyStepScore") // should be 10002813279337
         }.also {
             println("Part 2 in $it")
         }
@@ -60,7 +60,7 @@ object Day14 {
                 links.forEach { element -> inc(element) }
 
                 if(!isCached) {
-                    println("Caching ${template.base} (${100.0 * remainderCache.size / (allElements.size * allElements.size)}% cached)")
+                    println("Caching ${template.base} (${100.0 * remainderCache.size / rules.size}% cached)")
                     remainderCache[template.base] = frequencies.map { (element, weight) ->
                         Link(element, 0, weight)
                     }.asSequence()
