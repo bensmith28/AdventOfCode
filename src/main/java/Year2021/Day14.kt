@@ -49,19 +49,15 @@ object Day14 {
                     frequencies[link.element] = frequencies.getValue(link.element) + link.weight
                 }
 
-                val template = PolymerTemplate(twoLinks.joinToString(""), rules)
-                val isCached = template.base in remainderCache
-                val links = if(isCached) {
-                    remainderCache.getValue(template.base)
-                } else {
-                    template.step(remainingExpansion)
+                val segment = twoLinks.joinToString("")
+                val links = remainderCache[segment]
+                    ?: PolymerTemplate(segment, rules).step(remainingExpansion)
                         .drop(1) // drop the repeated first link, will capture the actual first link below
-                }
                 links.forEach { element -> inc(element) }
 
-                if(!isCached) {
-                    println("Caching ${template.base} (${100.0 * remainderCache.size / rules.size}% cached)")
-                    remainderCache[template.base] = frequencies.map { (element, weight) ->
+                if (segment !in remainderCache) {
+                    println("Caching $segment (${100.0 * remainderCache.size / rules.size}% cached)")
+                    remainderCache[segment] = frequencies.map { (element, weight) ->
                         Link(element, 0, weight)
                     }.asSequence()
                 }

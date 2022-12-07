@@ -55,7 +55,7 @@ class Day14Test {
         )
     }
 
-    /*@Test*/ fun `part 2 score`() {
+    @Test fun `part 2 score`() {
         val uut = Day14.PolymerTemplate.parse(sample)
         assertEquals(
             2188189693529,
