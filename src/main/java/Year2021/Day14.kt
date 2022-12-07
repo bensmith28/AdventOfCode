@@ -1,10 +1,6 @@
 package Year2021
 
-import kotlinx.coroutines.asCoroutineDispatcher
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
 import util.asResourceFile
-import java.util.concurrent.Executors
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
@@ -43,35 +39,46 @@ object Day14 {
         }
 
         fun score(n: Int): Long {
-            val frequencies = Executors
-                .newFixedThreadPool(Runtime.getRuntime().availableProcessors() - 2)
-                .asCoroutineDispatcher()
-                .use { coroutineContext ->
-                    runBlocking(coroutineContext) {
-                        val allElements = rules.values.toSet()
-                        base.windowed(2).mapIndexed { i, twoLinks ->
-                            async {
-                                val frequencies = allElements.associateWith { 0L }.toMutableMap()
-                                fun inc(link: Link) {
-                                    frequencies[link.element] = frequencies.getValue(link.element) + 1
-                                }
-
-                                val links = PolymerTemplate(twoLinks, rules).step(n).iterator()
-                                if (i != 0) links.next() // drop the repeated first link
-                                links.forEach { element -> inc(element) }
-                                frequencies.toMap()
-                            }
-                        }.map {
-                            it.await()
-                        }.reduce { acc, freq ->
-                            (acc.keys + freq.keys).associateWith { key ->
-                                val a = acc[key] ?: 0
-                                val f = freq[key] ?: 0
-                                a + f
-                            }
-                        }
-                    }
+            val initialExpansion = n/2
+            val remainingExpansion = n - n/2
+            val allElements = rules.values.toSet()
+            val remainderCache = mutableMapOf<String, Sequence<Link>>()
+            val frequencies = step(initialExpansion).windowed(2).map { twoLinks ->
+                val frequencies = allElements.associateWith { 0L }.toMutableMap()
+                fun inc(link: Link) {
+                    frequencies[link.element] = frequencies.getValue(link.element) + link.weight
                 }
+
+                val template = PolymerTemplate(twoLinks.joinToString(""), rules)
+                val isCached = template.base in remainderCache
+                val links = if(isCached) {
+                    remainderCache.getValue(template.base)
+                } else {
+                    template.step(remainingExpansion)
+                        .drop(1) // drop the repeated first link, will capture the actual first link below
+                }
+                links.forEach { element -> inc(element) }
+
+                if(!isCached) {
+                    println("Caching ${template.base} (${100.0 * remainderCache.size / (allElements.size * allElements.size)}% cached)")
+                    remainderCache[template.base] = frequencies.map { (element, weight) ->
+                        Link(element, 0, weight)
+                    }.asSequence()
+                }
+
+                frequencies.toMap()
+            }.reduce { acc, freq ->
+                (acc.keys + freq.keys).associateWith { key ->
+                    val a = acc[key] ?: 0
+                    val f = freq[key] ?: 0
+                    a + f
+                }
+            }.let { withoutTipOfChain ->
+                // count the tip of the chain
+                withoutTipOfChain.plus(
+                    base.first() to withoutTipOfChain.getOrDefault(base.first(), 0L) + 1
+                )
+            }
 
             val least = frequencies.values.minOrNull()!!
             val most = frequencies.values.maxOrNull()!!
@@ -81,10 +88,11 @@ object Day14 {
 
         data class Link(
             val element: Char,
-            val step: Int
+            val step: Int,
+            val weight: Long = 1L
         ) {
             override fun toString(): String {
-                return "$element"
+                return (1..weight).map { element }.joinToString("")
             }
         }
 
@@ -94,7 +102,7 @@ object Day14 {
                 while (chain.size > 1) {
                     val tip = chain.removeFirst()
                     var next = chain.first().element
-                    for(step in tip.step + 1 .. n) {
+                    for (step in tip.step + 1..n) {
                         next = rules["" + tip.element + next]!!
                         chain.addFirst(Link(next, step))
                     }
