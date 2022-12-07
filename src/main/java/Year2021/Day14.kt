@@ -64,11 +64,7 @@ object Day14 {
 
                 frequencies.toMap()
             }.reduce { acc, freq ->
-                (acc.keys + freq.keys).associateWith { key ->
-                    val a = acc[key] ?: 0
-                    val f = freq[key] ?: 0
-                    a + f
-                }
+                (acc.keys + freq.keys).associateWith { key -> (acc[key] ?: 0) + (freq[key] ?: 0) }
             }.let { withoutTipOfChain ->
                 // count the tip of the chain
                 withoutTipOfChain.plus(
