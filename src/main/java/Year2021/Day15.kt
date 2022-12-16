@@ -9,11 +9,6 @@ object Day15 {
         line.map { it.digitToInt() }.toIntArray()
     }.toTypedArray()
 
-    operator fun Grid.get(location: Coordinate): Int = this[location.first][location.second]
-    operator fun Grid.set(location: Coordinate, value: Int) {
-        this[location.first][location.second] = value
-    }
-
     class ExpandableGrid(
         private val grid: Array<IntArray>,
         expansionFactor: Int = 1
@@ -34,7 +29,7 @@ object Day15 {
         val height = grid.size * expansionFactor
         val width = grid.first().size * expansionFactor
     }
-    private fun Coordinate.move(move: Move) = (this.first + move.deltaX) to (this.second + move.deltaY)
+    fun Coordinate.move(move: Move) = (this.first + move.deltaX) to (this.second + move.deltaY)
 
     enum class Move(val deltaX: Int, val deltaY: Int) {
         UP(0, -1),
@@ -43,7 +38,7 @@ object Day15 {
         RIGHT(1, 0)
     }
 
-    class Attempt(
+    data class Attempt(
         val location: Coordinate = 0 to 0,
         val score: Int = 0
     )
@@ -88,3 +83,8 @@ object Day15 {
 
 typealias Grid = Array<IntArray>
 typealias Coordinate = Pair<Int,Int>
+
+operator fun Grid.get(location: Coordinate): Int = this[location.second][location.first]
+operator fun Grid.set(location: Coordinate, value: Int) {
+    this[location.second][location.first] = value
+}
