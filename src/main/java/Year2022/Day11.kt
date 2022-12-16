@@ -83,7 +83,7 @@ object Day11 {
     }
 
     fun List<Monkey>.getMonkeyBusiness() =
-        this.map { it.inspections }.sortedDescending().take(2).fold(1L) { acc, business -> acc * business }
+        this.map { it.inspections }.sortedDescending().take(2).let { (first, second) -> first * second }
 
     @JvmStatic
     fun main(args: Array<String>) {
