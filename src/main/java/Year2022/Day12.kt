@@ -66,7 +66,7 @@ object Day12 {
         println("Part 1: $part1")
 
         val starts = grid.findAllStartingPoints()
-        val part2 = starts.minOf { start -> findBestRouteScore(grid, start, end) }
+        val part2 = starts.minOf { alternateStart -> findBestRouteScore(grid, alternateStart, end) }
 
         println("Part 2: $part2")
     }
