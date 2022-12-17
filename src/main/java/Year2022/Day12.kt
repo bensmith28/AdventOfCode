@@ -29,18 +29,18 @@ object Day12 {
     fun findBestRouteScore(heightGrid: Grid, start: Coordinate, end: Coordinate): Int {
         val bestAttempts = Array(heightGrid.size) { IntArray(heightGrid.first().size) { Int.MAX_VALUE } }
 
-        val attempts = ArrayDeque<Day15.Attempt>()
-        attempts.add(Day15.Attempt(start))
+        val attempts = ArrayDeque<Year2021.Day15.Attempt>()
+        attempts.add(Year2021.Day15.Attempt(start))
 
         while(attempts.isNotEmpty()) {
             val attempt = attempts.removeFirst()
             if( attempt.score < bestAttempts[attempt.location]) {
                 bestAttempts[attempt.location] = attempt.score
-                Day15.Move.values().forEach { move ->
+                Year2021.Day15.Move.values().forEach { move ->
                     val newLocation = attempt.location.move(move)
                     if(heightGrid.isValid(attempt.location, newLocation)) {
                         attempts.add(
-                            Day15.Attempt(
+                            Year2021.Day15.Attempt(
                                 newLocation,
                                 attempt.score + 1
                             )
