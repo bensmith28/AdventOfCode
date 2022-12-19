@@ -20,4 +20,13 @@ internal class Day16Test {
             Day16.findGreatestPressureRelease(valves)
         )
     }
+
+    @Test
+    fun `part 2`() {
+        val valves = input.map { Day16.Valve.parse(it) }
+        assertEquals(
+            1707,
+            Day16.findGreatestPressureRelease(valves, 26, 2)
+        )
+    }
 }

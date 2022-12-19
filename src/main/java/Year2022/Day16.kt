@@ -11,23 +11,50 @@ object Day16 {
         println("Part 1: $part1")
     }
 
-    fun findGreatestPressureRelease(valves: List<Valve>): Int {
+    fun List<Valve>.generateDistanceMap(): Map<String, Map<String, Int>> {
+        val ret = mutableMapOf<String, MutableMap<String,Int>>()
+
+        this.forEach { origin ->
+            val destinationMap = origin.tunnels.associateWith { 1 }.toMutableMap()
+            var distance = 2
+            val secondaryOrigins = origin.tunnels.toMutableSet()
+            while(destinationMap.size < this.size - 1) {
+                val secondaryDestinations = this.filter { it.id in secondaryOrigins }.flatMap { it.tunnels }
+                    .filter { it != origin.id }.toSet()
+                secondaryDestinations.forEach { destination ->
+                    destinationMap.putIfAbsent(destination, distance)
+                }
+                secondaryOrigins.clear()
+                secondaryOrigins.addAll(secondaryDestinations)
+                distance++
+            }
+            ret[origin.id] = destinationMap
+        }
+
+        return ret
+    }
+
+    fun findGreatestPressureRelease(valves: List<Valve>, timeRemaining: Int = 30, numActors: Int = 1): Int {
         val valveMap = valves.associateBy { it.id }
+        val distanceMap = valves.generateDistanceMap()
         val bestAttempts = mutableMapOf<String, Attempt>()
         val attempts = ArrayDeque<Attempt>()
-        attempts.add(Attempt("AA", 30))
+        attempts.add(Attempt("AA", timeRemaining))
 
         while (attempts.isNotEmpty()) {
             val attempt = attempts.removeFirst()
-            if (attempt > bestAttempts.getOrDefault(attempt.key, Attempt.WORST)) {
+            if (attempt.timeRemaining >= 0 && attempt > bestAttempts.getOrDefault(attempt.key, Attempt.WORST)) {
                 bestAttempts[attempt.key] = attempt
-                val currentValve = valveMap[attempt.location]!!
-                currentValve.tunnels.forEach { destination ->
-                    attempts.add(MoveTo(destination).act(attempt))
-                }
-                if(attempt.location !in attempt.valvesOpen) {
-                    attempts.add(OpenValve(currentValve).act(attempt))
-                }
+                distanceMap[attempt.location]!!.filterKeys { it !in attempt.valvesOpen }
+                    .forEach { (destination, distance) ->
+                        attempts.add(Attempt(
+                            location = destination,
+                            timeRemaining = attempt.timeRemaining - (distance + 1),
+                            unSortedValvesOpen = attempt.unSortedValvesOpen + destination,
+                            pressureReleased = attempt.pressureReleased + attempt.flowRate * (distance + 1),
+                            flowRate = attempt.flowRate + valveMap[destination]!!.flowRate
+                        ))
+                    }
             }
         }
 
@@ -58,12 +85,12 @@ object Day16 {
     data class Attempt(
         val location: String,
         val timeRemaining: Int,
-        private val unSortedValvesOpen: Set<String> = emptySet(),
+        val unSortedValvesOpen: Set<String> = emptySet(),
         val pressureReleased: Int = 0,
         val flowRate: Int = 0
     ) : Comparable<Attempt> {
         val valvesOpen = unSortedValvesOpen.toSortedSet()
-        val key: String = location + valvesOpen
+        val key: String = timeRemaining.toString()
         val score = pressureReleased + timeRemaining * flowRate
 
         override fun compareTo(other: Attempt): Int =
