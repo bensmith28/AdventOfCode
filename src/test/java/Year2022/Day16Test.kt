@@ -26,7 +26,7 @@ internal class Day16Test {
         val valves = input.map { Day16.Valve.parse(it) }
         assertEquals(
             1707,
-            Day16.findGreatestPressureRelease(valves, 26, 2)
+            Day16.findGreatestPressureReleaseWithHelp(valves)
         )
     }
 }
