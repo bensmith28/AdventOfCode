@@ -5,7 +5,7 @@ import java.io.File
 object Day9 {
     @JvmStatic
     fun main(args: Array<String>) {
-        val lines = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day9.txt")
+        val lines = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day9.txt")
             .readLines()
 
         val lengthOfDecompressed = lines.map { decompress(it) }

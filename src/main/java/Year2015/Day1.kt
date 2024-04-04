@@ -2,7 +2,7 @@ package main.kotlin.Year2015
 
 import java.io.File
 object Day1 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day1.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day1.txt")
 
     fun main() {
         var currentFloor = 0

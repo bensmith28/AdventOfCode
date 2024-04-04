@@ -6,7 +6,7 @@ import java.io.File
 
 internal class Day7Test {
     @Test fun `verify tls`() {
-        val samples = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day7-sample.txt")
+        val samples = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day7-sample.txt")
             .readLines()
 
         val expected = listOf(true, false, false, true, true)
@@ -16,7 +16,7 @@ internal class Day7Test {
     }
 
     @Test fun `verify ssl`() {
-        val samples = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day7-sampleB.txt")
+        val samples = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day7-sampleB.txt")
             .readLines()
 
         val expected = listOf(true, false, true, true, false, true, false)

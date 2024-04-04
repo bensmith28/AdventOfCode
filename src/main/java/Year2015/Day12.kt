@@ -6,7 +6,7 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.io.File
 
 object Day12 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day12.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day12.txt")
 
     val objectMapper = jacksonObjectMapper()
 

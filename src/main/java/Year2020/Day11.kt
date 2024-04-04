@@ -4,7 +4,7 @@ import java.io.File
 
 object Day11 {
 
-    val initialLayout = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day11.txt")
+    val initialLayout = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day11.txt")
         .let { Layout2.parse(it.readLines()) }
 
     @JvmStatic

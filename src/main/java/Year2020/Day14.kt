@@ -6,7 +6,7 @@ import kotlin.math.roundToInt
 import kotlin.math.roundToLong
 
 object Day14 {
-    val instructions = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day14.txt")
+    val instructions = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day14.txt")
         .readLines().map { Instruction.parse(it) }
 
     @JvmStatic

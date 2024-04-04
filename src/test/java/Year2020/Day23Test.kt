@@ -38,7 +38,7 @@ internal class Day23Test {
         TODO()
     }
 
-    @Test fun `1000000 cups, 1000000 moves`() {
+    fun `1000000 cups, 1000000 moves`() {
         val expected = 149245887792L
 
         val game = Day23.GameState.parse(sampleInput).cupsToOneMillion()

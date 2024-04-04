@@ -5,7 +5,7 @@ import java.io.File
 object Day7 {
     @JvmStatic
     fun main(args: Array<String>) {
-        val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day7.txt")
+        val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day7.txt")
             .readLines()
 
         val tlsCount = input.filter { supportsTls(it) }.count()

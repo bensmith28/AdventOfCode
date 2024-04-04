@@ -3,9 +3,9 @@ package Year2015
 import java.io.File
 
 object Day18 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day18.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day18.txt")
     val steps = 100
-//    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day18-sample.txt")
+//    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day18-sample.txt")
 //    val steps = 5
 
     @JvmStatic

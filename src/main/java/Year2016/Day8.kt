@@ -5,7 +5,7 @@ import java.io.File
 object Day8 {
     @JvmStatic
     fun main(args: Array<String>) {
-        val instructions = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day8.txt")
+        val instructions = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day8.txt")
             .readLines().map { Instruction.parse(it) }
 
         val screen = Screen()

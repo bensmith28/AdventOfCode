@@ -5,7 +5,7 @@ import kotlin.math.abs
 
 object Day12 {
 
-    val instructions = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day12.txt")
+    val instructions = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day12.txt")
         .readLines().flatMap { line ->
             line.split(",").map { Instruction.parse(it.trim()) }
         }

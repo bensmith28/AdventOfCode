@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import java.io.File
 
 internal class Day17Test {
-    private val sampleInput = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day17-sample.txt")
+    private val sampleInput = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day17-sample.txt")
 
     @Test fun `test sample 3d`() {
         val dimension = Day17.PocketDimension.parse(sampleInput.readLines(), 3)

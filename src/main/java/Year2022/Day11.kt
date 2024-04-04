@@ -1,7 +1,6 @@
 package Year2022
 
 import util.asResourceFile
-import kotlin.test.assertEquals
 
 object Day11 {
     data class Monkey(

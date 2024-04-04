@@ -3,7 +3,7 @@ package Year2015
 import java.io.File
 
 object Day23 {
-    val program = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day23.txt")
+    val program = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day23.txt")
         .readLines().map { Instruction.parse(it) }
 
     @JvmStatic

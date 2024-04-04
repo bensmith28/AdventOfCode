@@ -3,7 +3,7 @@ package Year2020
 import java.io.File
 
 object Day16 {
-    val inputFile = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day16.txt")
+    val inputFile = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day16.txt")
 
     @JvmStatic
     fun main(args: Array<String>) {

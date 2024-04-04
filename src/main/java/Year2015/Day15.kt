@@ -6,7 +6,7 @@ import kotlin.math.pow
 import kotlin.math.roundToInt
 
 object Day15 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day15.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day15.txt")
     val cookieBatch = 1000
     val batches = 100
     val variation = 0.5

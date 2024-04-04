@@ -5,7 +5,7 @@ import kotlin.math.pow
 import kotlin.math.roundToInt
 
 object Day9 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day9.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day9.txt")
 
     @JvmStatic
     fun main(args: Array<String>) {

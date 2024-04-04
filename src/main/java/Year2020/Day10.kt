@@ -3,7 +3,7 @@ package Year2020
 import java.io.File
 
 object Day10 {
-    val adapters = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day10.txt")
+    val adapters = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day10.txt")
         .readLines().map { it.toInt() }
 
     @JvmStatic

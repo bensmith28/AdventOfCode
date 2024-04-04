@@ -66,7 +66,7 @@ internal class Day18Test {
     }
 
     @Test fun `sum from file`() {
-        val file = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day18-sample.txt")
+        val file = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day18-sample.txt")
 
         val expected = 231L + 51 + 46 + 1445 + 669060 + 23340
         val actual = file.readLines().fold(0L) { sum, line ->

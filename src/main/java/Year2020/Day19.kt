@@ -5,7 +5,7 @@ import java.io.File
 object Day19 {
     @JvmStatic
     fun main(args: Array<String>) {
-        val file = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day19.txt")
+        val file = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day19.txt")
         val rules = parseRules(file)
         val test = getRegex(rules)
 

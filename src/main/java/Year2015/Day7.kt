@@ -4,7 +4,7 @@ import java.io.File
 import java.lang.IllegalStateException
 
 object Day7 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day7b.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day7b.txt")
 
     val expressions = input.readLines().map { Expression.parse(it) }.associateBy { it.destination }
     val results = mutableMapOf<String, UShort>()

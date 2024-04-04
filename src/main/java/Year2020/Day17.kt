@@ -4,7 +4,7 @@ import java.io.File
 
 object Day17 {
 
-    val inputFile = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day17.txt")
+    val inputFile = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day17.txt")
 
     @JvmStatic
     fun main(args: Array<String>) {

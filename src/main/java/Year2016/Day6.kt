@@ -6,7 +6,7 @@ object Day6 {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day6.txt")
+        val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day6.txt")
             .readLines()
         val message = correctErrors(input)
         println("Message: $message")

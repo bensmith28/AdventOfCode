@@ -4,7 +4,7 @@ import java.io.File
 import java.lang.IllegalArgumentException
 
 object Day4 {
-    val rooms = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day4.txt")
+    val rooms = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day4.txt")
         .readLines().map { RoomEntry.parse(it) }
 
     @JvmStatic

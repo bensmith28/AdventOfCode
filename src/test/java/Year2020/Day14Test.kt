@@ -6,7 +6,7 @@ import java.io.File
 
 internal class Day14Test {
     @Test fun `test sample`() {
-        val instructions = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day14-sample.txt")
+        val instructions = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day14-sample.txt")
             .readLines().map { Day14.Instruction.parse(it) }
 
         val expected = 165L

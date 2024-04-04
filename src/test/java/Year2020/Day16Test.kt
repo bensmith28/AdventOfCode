@@ -6,7 +6,7 @@ import java.io.File
 
 internal class Day16Test {
     @Test fun `test sample scanning error`() {
-        val doc = Day16.Document.parse(File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day16-sample.txt"))
+        val doc = Day16.Document.parse(File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day16-sample.txt"))
 
         val expected = 71
         val actual = Day16.getScanningError(doc)
@@ -15,7 +15,7 @@ internal class Day16Test {
     }
 
     @Test fun `test ticket parsing`() {
-        val doc = Day16.Document.parse(File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day16-sampleB.txt"))
+        val doc = Day16.Document.parse(File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day16-sampleB.txt"))
 
         val expected = mapOf(
             "class" to 12,

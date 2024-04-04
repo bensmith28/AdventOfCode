@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import java.io.File
 
 internal class Day21Test {
-    val sampleInputFile = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day21-sample.txt")
+    val sampleInputFile = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day21-sample.txt")
 
     @Test fun `test food parsing`() {
         val foods = sampleInputFile.readLines().map { Day21.Food.parse(it) }

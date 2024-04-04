@@ -4,7 +4,7 @@ import java.io.File
 
 object Day3 {
 
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2016/Day3.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2016/Day3.txt")
 
     val triangles = input.readLines().map { Triangle.parse(it) }
 

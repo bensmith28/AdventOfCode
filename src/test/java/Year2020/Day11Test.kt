@@ -7,12 +7,12 @@ import java.io.File
 internal class Day11Test {
     val initial = getSample("round0")
     private fun getSample(label: String): Day11.Layout {
-        return File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day11-sample-$label.txt")
+        return File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day11-sample-$label.txt")
             .let { Day11.Layout.parse(it.readLines()) }
     }
 
     private fun getSightSample(label: String): Day11.Layout2 {
-        return File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day11-sample-$label.txt")
+        return File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day11-sample-$label.txt")
             .let { Day11.Layout2.parse(it.readLines()) }
     }
 

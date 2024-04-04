@@ -4,7 +4,7 @@ import java.io.File
 import kotlin.math.max
 
 object Day13 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day13.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day13.txt")
 
     private fun Int.factorial(): Int {
         var current = this

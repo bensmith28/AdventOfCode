@@ -6,7 +6,7 @@ import java.io.File
 
 internal class Day19Test {
 
-    val sampleInput = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day19-sample.txt")
+    val sampleInput = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day19-sample.txt")
     val rules = Day19.parseRules(sampleInput)
     val inputs = Day19.parseInputs(sampleInput)
 
@@ -27,7 +27,7 @@ internal class Day19Test {
     }
 
     @Test fun `evaluate sample b not recursive`() {
-        val sampleB = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day19-sampleB.txt")
+        val sampleB = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day19-sampleB.txt")
         val rules = Day19.parseRules(
             sampleB,
             false
@@ -44,7 +44,7 @@ internal class Day19Test {
     }
 
     @Test fun `evaluate sample b recursive`() {
-        val sampleB = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day19-sampleB.txt")
+        val sampleB = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day19-sampleB.txt")
         val rules = Day19.parseRules(
             sampleB,
             true

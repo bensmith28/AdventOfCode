@@ -4,7 +4,7 @@ import java.io.File
 import java.util.Collections.min
 
 object Day14 {
-    val input = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2015/Day14.txt")
+    val input = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2015/Day14.txt")
 
     @JvmStatic
     fun main(args: Array<String>) {

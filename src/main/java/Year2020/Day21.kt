@@ -5,7 +5,7 @@ import java.io.File
 object Day21 {
     @JvmStatic
     fun main(args: Array<String>) {
-        val foods = File("/home/benyamin888/IdeaProjects/AdventOfCode/src/main/resources/Year2020/Day21.txt")
+        val foods = File("/Users/ben/code/AdventOfCode/src/main/resources/Year2020/Day21.txt")
             .readLines().map { Food.parse(it) }
 
         val safeIngredients = ingredientsThatCantBeAllergens(foods)
