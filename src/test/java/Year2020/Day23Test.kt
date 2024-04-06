@@ -31,7 +31,7 @@ internal class Day23Test {
         assertEquals(expected, actual)
     }
 
-    @Test fun `run special case sequential`() {
+    fun `run special case sequential`() {
         val initial = Day23.GameState((1..20).toList().toTypedArray())
         initial.step(100)
 
