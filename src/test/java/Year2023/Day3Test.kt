@@ -1,5 +1,6 @@
 package Year2023
 
+import Year2023.Day3.findGearRatios
 import Year2023.Day3.findPartNumbers
 import Year2023.Day3.findSymbols
 import org.junit.jupiter.api.Assertions.*
@@ -76,13 +77,7 @@ class Day3Test {
         val parts = sample.findPartNumbers()
         val symbols = sample.findSymbols()
 
-        val gearsRatios = symbols.mapNotNull { s ->
-            val adj = parts.filter { p -> p.adjacentTo(s) }
-
-            if(adj.size == 2) {
-                adj.first().number * adj.last().number
-            } else null
-        }
+        val gearsRatios = findGearRatios(parts,symbols)
 
         val expected = 467835
         val actual = gearsRatios.sum()

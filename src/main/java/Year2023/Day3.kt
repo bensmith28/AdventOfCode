@@ -13,6 +13,20 @@ object Day3 {
 
         println("Part 1: $sumOfParts")
 
+        val gearsRatios = findGearRatios(
+                parts,
+                symbols
+        )
+
+        val sumOfGearRatios = gearsRatios.sum()
+
+        println("Part 2: $sumOfGearRatios")
+    }
+
+    fun findGearRatios(
+            parts: List<PartNumber>,
+            symbols: List<Pair<Int,Int>>
+    ): List<Int> {
         val gearsRatios = symbols.mapNotNull { s ->
             val adj = parts.filter { p -> p.adjacentTo(s) }
 
@@ -21,9 +35,7 @@ object Day3 {
             } else null
         }
 
-        val sumOfGearRatios = gearsRatios.sum()
-
-        println("Part 2: $sumOfGearRatios")
+        return gearsRatios
     }
 
     data class PartNumber(
