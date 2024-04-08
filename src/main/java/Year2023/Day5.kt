@@ -14,26 +14,41 @@ object Day5 {
 
     data class Almanac(
         val seeds: List<Long>,
-        val seedToSoil: Map<Long,Long>,
-        val soilToFertilizer: Map<Long,Long>,
-        val fertilizerToWater: Map<Long,Long>,
-        val waterToLight: Map<Long,Long>,
-        val lightToTemperature: Map<Long,Long>,
-        val temperatureToHumidity: Map<Long,Long>,
-        val humidityToLocation: Map<Long,Long>
+        val seedToSoil: List<Conversion>,
+        val soilToFertilizer: List<Conversion>,
+        val fertilizerToWater: List<Conversion>,
+        val waterToLight: List<Conversion>,
+        val lightToTemperature: List<Conversion>,
+        val temperatureToHumidity: List<Conversion>,
+        val humidityToLocation: List<Conversion>
     ) {
+        private operator fun List<Conversion>.get(key: Long) = this.asSequence()
+            .map { it[key] }.firstOrNull { it != null } ?: key
         fun locationForSeed(seed: Long): Long {
-            val soil = seedToSoil[seed] ?: seed
-            val fertilizer = soilToFertilizer[soil] ?: soil
-            val water = fertilizerToWater[fertilizer] ?: fertilizer
-            val light = waterToLight[water] ?: water
-            val temperature = lightToTemperature[light] ?: light
-            val humidity = temperatureToHumidity[temperature] ?: temperature
-            val location = humidityToLocation[humidity] ?: humidity
+            val soil = seedToSoil[seed]
+            val fertilizer = soilToFertilizer[soil]
+            val water = fertilizerToWater[fertilizer]
+            val light = waterToLight[water]
+            val temperature = lightToTemperature[light]
+            val humidity = temperatureToHumidity[temperature]
+            val location = humidityToLocation[humidity]
             return location
         }
 
         fun minLocation() = seeds.map { locationForSeed(it) }.minOrNull() ?: error("no seeds??")
+    }
+    
+    class Conversion private constructor(
+        val range: LongRange,
+        val delta: Long
+    ) {
+        constructor(
+            destStart: Long,
+            sourceStart: Long,
+            rangeLength: Long
+        ): this(sourceStart until sourceStart+rangeLength, destStart - sourceStart)
+        
+        operator fun get(key: Long): Long? = if( key in range ) key + delta else null
     }
 
     fun List<String>.parseAlmanac(): Almanac {
@@ -41,51 +56,48 @@ object Day5 {
         val seeds = lines.removeFirst().removePrefix("seeds: ").split(" ").map { it.toLong() }
         lines.removeFirst()
         check(lines.removeFirst() == "seed-to-soil map:")
-        fun parseLine(s: String, map: MutableMap<Long,Long>) {
+        fun parseLine(s: String, list: MutableList<Conversion>) {
             val (destStart, sourceStart, rangeLength) =
                 s.split(" ").map { it.toLong() }
-            val delta = destStart - sourceStart
-            (sourceStart until sourceStart+rangeLength).forEach { i ->
-                map[i] = i + delta
-            }
+            list += Conversion(destStart, sourceStart, rangeLength)
         }
-        val sts = mutableMapOf<Long,Long>()
+        val sts = mutableListOf<Conversion>()
         while(lines.first().isNotBlank()) {
             parseLine(lines.removeFirst(), sts)
         }
         lines.removeFirst()
         check(lines.removeFirst() == "soil-to-fertilizer map:")
-        val stf = mutableMapOf<Long,Long>()
+        val stf = mutableListOf<Conversion>()
         while(lines.first().isNotBlank()) {
             parseLine(lines.removeFirst(), stf)
         }
         lines.removeFirst()
         check(lines.removeFirst() == "fertilizer-to-water map:")
-        val ftw = mutableMapOf<Long,Long>()
+        val ftw = mutableListOf<Conversion>()
         while(lines.first().isNotBlank()) {
             parseLine(lines.removeFirst(), ftw)
         }
         lines.removeFirst()
         check(lines.removeFirst() == "water-to-light map:")
-        val wtl = mutableMapOf<Long,Long>()
+        val wtl = mutableListOf<Conversion>()
         while(lines.first().isNotBlank()) {
             parseLine(lines.removeFirst(), wtl)
         }
         lines.removeFirst()
         check(lines.removeFirst() == "light-to-temperature map:")
-        val ltt = mutableMapOf<Long,Long>()
+        val ltt = mutableListOf<Conversion>()
         while(lines.first().isNotBlank()) {
             parseLine(lines.removeFirst(), ltt)
         }
         lines.removeFirst()
         check(lines.removeFirst() == "temperature-to-humidity map:")
-        val tth = mutableMapOf<Long,Long>()
+        val tth = mutableListOf<Conversion>()
         while(lines.first().isNotBlank()) {
             parseLine(lines.removeFirst(), tth)
         }
         lines.removeFirst()
         check(lines.removeFirst() == "humidity-to-location map:")
-        val htl = mutableMapOf<Long,Long>()
+        val htl = mutableListOf<Conversion>()
         while(lines.isNotEmpty() && lines.first().isNotBlank()) {
             parseLine(lines.removeFirst(), htl)
         }
