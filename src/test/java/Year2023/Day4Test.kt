@@ -1,0 +1,48 @@
+package Year2023
+
+import Year2023.Day4.collect
+import Year2023.Day4.toCard
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
+
+class Day4Test {
+
+    val sample = """
+        Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
+        Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
+        Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
+        Card 4: 41 92 73 84 69 | 59 84 76 51 58  5 54 83
+        Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
+        Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
+    """.trimIndent().split("\n")
+    @Test fun parseCard() {
+        val expected = Day4.Card(
+            id = 1,
+            winners = listOf(41, 48, 83, 86, 17),
+            numbers = listOf(83, 86, 6, 31, 17, 9, 48, 53)
+        )
+        val actual = sample.first().toCard()
+
+        assertEquals(expected, actual)
+    }
+
+    @Test fun parseRealCard() {
+        val input = "Card   1: 81  1 43 40 49 51 38 65 36  4 | 21 15  1 43 60  9 83 81 35 49 40 38 82 65 20  4 58 94 16 89 84 10 77 48 76"
+        val card = input.toCard()
+    }
+
+    @Test fun part1() {
+        val expected = 13
+        val actual = sample.sumOf { it.toCard().score }
+
+        assertEquals(expected, actual)
+    }
+
+    @Test fun part2() {
+        val cards = sample.map { it.toCard() }
+        val expected = 30
+        val actual = collect(cards)
+
+        assertEquals(expected, actual)
+    }
+}
